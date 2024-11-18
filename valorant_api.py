@@ -18,10 +18,10 @@ def ultima_atividade(nametag):
                 data_formatada = data_datetime.strftime("%d/%m/%Y")
                 timestamp = datetime.strptime(data_formatada, "%d/%m/%Y").timestamp()
                 return data_formatada
-        return '????', 0
+        return '????'
     except:
         traceback.print_exc()
-        return '????', 0
+        return '????'
     
 def ultimo_rank(nametag):
     try:
