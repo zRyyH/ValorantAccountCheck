@@ -48,14 +48,13 @@ def postAccount(**kwargs):
 
 accounts = getAccounts()
 
-for account in accounts:
+for account in accounts['mensagem']:
     try:
         nametag = account['nametag']
 
         account['ultimaAtividade'] = ultima_atividade(nametag)
         account['elo'] = ultimo_rank(nametag)
 
-        account.pop('dataAtualizacao')
         account.pop('dataRegistro')
 
         postAccount(**account)
